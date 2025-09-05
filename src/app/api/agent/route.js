@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 
-let agents: any[] = [];
+let agents= [];
 
-export async function POST(request: Request) {
+export async function POST(request) {
   try {
     const body = await request.json();
 
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ message: "Agent connected", total: agents.length });
-  } catch (error: any) {
+  } catch (error) {
     console.error("API Error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }

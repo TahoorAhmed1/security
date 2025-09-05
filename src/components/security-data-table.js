@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "./ui/progress"
 
 async function getSecurityData() {
-  const res = await fetch("http://localhost:3000/api/agent", { cache: "no-store" })
+  const res = await fetch("https://security-orcin.vercel.app/api/agent", { cache: "no-store" })
   return res.json()
 }
 
