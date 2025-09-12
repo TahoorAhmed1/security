@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/sidebar";
-import { Header } from "@/components/header";
+import { Sidebar } from "@/components/common/sidebar";
+import { Header } from "@/components/common/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MVO",
+  title: "MVP",
   description: "MVP",
 };
 

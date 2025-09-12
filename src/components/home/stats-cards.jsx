@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
-import { Shield, Users, Monitor, Mail } from "lucide-react"; // <-- import Lucide icons
+import { Shield, Users, Monitor, Mail } from "lucide-react"; 
 
 export function StatsCards({ data }) {
   const statsData = [
     {
       title: "Security Score",
       value: `${data?.[0]?.SecurityScore || 0} %` ,
-      percentage: "72%", // optional calc
-      change: "+347", // optional calc
+      percentage: "72%", 
+      change: "+347",
       changeText: "Compared to last Week",
       color: "green",
       borderColor: "border-green-500",

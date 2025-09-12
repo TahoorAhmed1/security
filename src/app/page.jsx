@@ -1,13 +1,13 @@
-import { StatsCards } from "@/components/stats-cards";
-import { SecurityRadar } from "@/components/security-radar";
-import { RiskDistribution } from "@/components/risk-distribution";
-import { RecentIssues } from "@/components/recent-issues";
+import { StatsCards } from "@/components/home/stats-cards";
+import { SecurityRadar } from "@/components/home/security-radar";
+import { RiskDistribution } from "@/components/home/risk-distribution";
+import { RecentIssues } from "@/components/home/recent-issues";
 import { SecurityDataTable } from "@/components/security-data-table";
-import { RealtimeLogs } from "@/components/realtime-logs";
-import { LoginHistory } from "@/components/login-history";
+import { RealtimeLogs } from "@/components/home/realtime-logs";
+import { LoginHistory } from "@/components/home/login-history";
 
 async function getSecurityData() {
-  const res = await fetch("http://localhost:3000/api/agent", {
+  const res = await fetch("https://security-orcin.vercel.app/api/agent", {
     cache: "no-store",
   });
   return res.json();
@@ -15,7 +15,6 @@ async function getSecurityData() {
 
 export default async function Dashboard() {
   const data = await getSecurityData();
-  console.log("data", data);
   return (
     <main className="flex-1 overflow-y-auto bg-gradient-to-br from-white/50 via-transparent to-purple-50/30">
       <div className="p-4 md:p-6 lg:p-8">
