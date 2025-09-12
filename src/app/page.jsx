@@ -15,6 +15,7 @@ async function getSecurityData() {
 
 export default async function Dashboard() {
   const data = await getSecurityData();
+  console.log('data', data)
   return (
     <main className="flex-1 overflow-y-auto bg-gradient-to-br from-white/50 via-transparent to-purple-50/30">
       <div className="p-4 md:p-6 lg:p-8">
