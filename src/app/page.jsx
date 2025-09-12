@@ -6,11 +6,20 @@ import { SecurityDataTable } from "@/components/security-data-table";
 import { RealtimeLogs } from "@/components/realtime-logs";
 import { LoginHistory } from "@/components/login-history";
 
-export default function Dashboard() {
+async function getSecurityData() {
+  const res = await fetch("http://localhost:3000/api/agent", {
+    cache: "no-store",
+  });
+  return res.json();
+}
+
+export default async function Dashboard() {
+  const data = await getSecurityData();
+  console.log("data", data);
   return (
     <main className="flex-1 overflow-y-auto bg-gradient-to-br from-white/50 via-transparent to-purple-50/30">
       <div className="p-4 md:p-6 lg:p-8">
-        <StatsCards />
+        <StatsCards data={data} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
           <SecurityRadar />
@@ -21,7 +30,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <SecurityDataTable />
+        <SecurityDataTable data={data} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mt-8">
           <RealtimeLogs />

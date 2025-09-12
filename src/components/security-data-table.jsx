@@ -2,13 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "./ui/progress"
 
-async function getSecurityData() {
-  const res = await fetch("https://security-orcin.vercel.app/api/agent", { cache: "no-store" })
-  return res.json()
-}
 
-export async function SecurityDataTable() {
-  const data = await getSecurityData()
+export async function SecurityDataTable({data}) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-8">
