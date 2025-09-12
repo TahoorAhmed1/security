@@ -15,7 +15,7 @@ import {
   LogOut,
 } from "lucide-react"
 import Image from "next/image"
-import logo from "../assets/logo.png"
+import logo from "@/assets/logo.png"
 
 const navigationItems = [
   { icon: ChartColumn, active: true },

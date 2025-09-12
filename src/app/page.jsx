@@ -2,7 +2,7 @@ import { StatsCards } from "@/components/home/stats-cards";
 import { SecurityRadar } from "@/components/home/security-radar";
 import { RiskDistribution } from "@/components/home/risk-distribution";
 import { RecentIssues } from "@/components/home/recent-issues";
-import { SecurityDataTable } from "@/components/security-data-table";
+import { SecurityDataTable } from "@/components/home/security-data-table";
 import { RealtimeLogs } from "@/components/home/realtime-logs";
 import { LoginHistory } from "@/components/home/login-history";
 

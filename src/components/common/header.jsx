@@ -1,6 +1,6 @@
 import { Search, Bell, Menu } from "lucide-react"
 import Image from "next/image"
-import logo from "../assets/logo.png"
+import logo from "@/assets/logo.png"
 
 export function Header() {
   return (

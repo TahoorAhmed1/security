@@ -6,7 +6,7 @@ export async function POST(request) {
   try {
     const body = await request.json();
 
-    const existing = agents.find(
+    const existing = agents?.find(
       (a) => a.MachineName === body.MachineName && a.UserName === body.UserName
     );
 
@@ -16,7 +16,7 @@ export async function POST(request) {
       agents.push({ ...body, id: Date.now(), lastSeen: Date.now() });
     }
 
-    return NextResponse.json({ message: "Agent connected", total: agents.length });
+    return NextResponse.json({ message: "Agent connected", total: agents?.length });
   } catch (error) {
     console.error("API Error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });

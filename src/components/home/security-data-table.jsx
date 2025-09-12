@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Progress } from "./ui/progress"
+import { Progress } from "../ui/progress"
 
 
 export async function SecurityDataTable({data}) {
